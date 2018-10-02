@@ -19,7 +19,7 @@ phases:
     name: Windows_NT
     enableTelemetry: true
     queue:
-      name: Helix
+      name: dotnet-external-temp
       parallel: 99
       matrix:
         debug_configuration:
