@@ -44,7 +44,8 @@ set DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
 set DOTNET_MULTILEVEL_LOOKUP=0
 
 :: Restore the Tools directory
-call %~dp0init-tools.cmd
+:: call %~dp0init-tools.cmd
+powershell -ExecutionPolicy ByPass -NoProfile -command "& """%~dp0eng\common\init-tools.ps1""" %*"
 if NOT [%ERRORLEVEL%]==[0] exit /b 1
 
 set _toolRuntime=%~dp0Tools

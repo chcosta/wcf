@@ -30,8 +30,7 @@ phases:
     - script: build.cmd
         -framework:netcoreapp
         -os:Windows_NT
-        -configuration $(_BuildConfig)
-        -prepareMachine
+        -$(_BuildConfig)
       name: Build
       displayName: Build
       condition: succeeded()
