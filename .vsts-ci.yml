@@ -1,6 +1,6 @@
 variables:
   Build.Repository.Clean: true
-  targetFramework: netcoreapp2.0
+  _targetFramework: netcoreapp2.0
   _HelixType: build/product
   _HelixSource: pr/StephenBonikowsky/wcf/$(Build.SourceBranch)
 
