@@ -60,6 +60,8 @@ echo Initializing BuildTools...
 echo Running: "%BUILD_TOOLS_PATH%init-tools.cmd" "%~dp0" "%DOTNET_CMD%" "%TOOLRUNTIME_DIR%" >> "%INIT_TOOLS_LOG%"
 call "%BUILD_TOOLS_PATH%init-tools.cmd" "%~dp0" "%DOTNET_CMD%" "%TOOLRUNTIME_DIR%" >> "%INIT_TOOLS_LOG%"
 set INIT_TOOLS_ERRORLEVEL=%ERRORLEVEL%
+ECHO dump env
+set
 if not [%INIT_TOOLS_ERRORLEVEL%]==[0] (
   echo ERROR: An error occured when trying to initialize the tools. Please check '%INIT_TOOLS_LOG%' for more details. 1>&2
   exit /b %INIT_TOOLS_ERRORLEVEL%
